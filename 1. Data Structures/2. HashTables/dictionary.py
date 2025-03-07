@@ -1,6 +1,3 @@
-
-    
-
 # Function to check if the current environment is Google Colab
 def is_google_colab():
     try:
@@ -8,4 +5,5 @@ def is_google_colab():
         return True
     except:
         return False
+    
     
