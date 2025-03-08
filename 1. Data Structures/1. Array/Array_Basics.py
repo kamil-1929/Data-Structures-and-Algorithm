@@ -159,3 +159,6 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+primes = [x for x in range(50) if is_prime(x)]
+print(primes)
