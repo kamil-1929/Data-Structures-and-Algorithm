@@ -150,3 +150,55 @@ print(first_element)
 ## Important note: queue is not good with List due to bad space complexity as it has to 
 # adjust the index of all elements when pop(0) is called
 # LinkedList is preferred for queue
+
+# List slicing
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+sliced_numbers = numbers[2:7]
+print(sliced_numbers)
+
+# Using enumerate to get index and value
+for index, value in enumerate(numbers):
+    print(f"Index: {index}, Value: {value}")
+    
+# Using all() to check if all elements are positive
+all_positive = all(x > 0 for x in numbers)
+print(all_positive)
+
+# Using any() to check if any element is even
+any_even = any(x%2==0 for x in numbers)
+print(any_even)
+
+# Using reduce() to calculate the product of elements
+from functools import reduce
+product = reduce(lambda x,y: x * y, numbers)
+print(product)
+
+# Using sorted() with a custom key
+words = ["apple", "banana", "cherry", "date"]
+sorted_key = sorted(words, key=len)
+print(sorted_key)
+
+# Using set() to find unique elements
+list1 = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]
+unique_numbers = set(list1)
+print(unique_numbers)
+
+# Nested list comprehensions for matrix transposition
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+transposed = [[row[i] for row in matrix] for i in range(len(matrix[0]))]
+print(transposed)
+
+# Using itertools for combinations
+from itertools import combinations
+comb = combinations(numbers,2)
+print(list(comb))
+
+# Using deque for efficient queue operations
+from collections import deque
+# deque is preferred over list for queue operations
+queue = deque()
+queue.append(1) # enqueue
+queue.append(2)
+queue.append(3)
+first_element = queue.popleft() # dequeue
+print(first_element)
