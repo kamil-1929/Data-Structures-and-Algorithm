@@ -163,3 +163,6 @@ def is_prime(n):
 primes = [x for x in range(50) if is_prime(x)]
 print(primes)
 
+
+
+
