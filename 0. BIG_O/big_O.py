@@ -1,6 +1,47 @@
 from time import perf_counter
 
 
+# Big O Notation 
+# O(1) - Constant Time Complexity
+def get_first_item(array):
+    return (array[0])
+#  O(1) - Constant Time Complexity
+#  Because we are only returning the first element in the array,
+#  regardless of the size of the array.
+
+
+# O(log n) - Logarithmic Time:
+# Example: Binary search in a sorted array.
+def binary_search(array,target):
+    low, high = 0, len(array) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if array[mid] == target:
+            return mid
+        elif array[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+# O(log n) - Logarithmic Time Complexity
+# Because the number of operations is reduced by half in each iteration.
+# This is why it's called Logarithmic Time Complexity.
+binary_search([1,2,3,4,5,6,7,8,9,10], 5)
+# Output: 4
+
+#  This means the target number 5 is at index 4 in the array.
+#  The time complexity of this function is O(log n) because the number of operations is reduced
+#  by half in each iteration.
+#  This is why it's called Logarithmic Time Complexity.
+# first iteration: 10/2 = 5
+# second iteration: 5/2 = 2.5
+# third iteration: 2.5/2 = 1.25
+# fourth iteration: 1.25/2 = 0.625
+# The number of operations is reduced by half in each iteration.
+# This is why it's called Logarithmic Time Complexity.
+
+
 nemo = ['nemo']
 
 def find_nemo(array):
@@ -98,3 +139,57 @@ def printAllnumberthenAllPairSums(numbers):
 printAllnumberthenAllPairSums([1, 2, 3, 4, 5]);
  # O(n) + O(n^2) = O(n^2) --> Quadratic Time Complexity
  
+
+# O(2^n) - Exponential Time
+def fibonacci(n):
+    if n <=1:
+        return n
+    return fibanacci(n-1) + fibanacci(n-2)
+# O(2^n) - Exponential Time Complexity
+# Because the number of operations is directly proportional to the size of the input, 
+# which is the number of elements in the array.
+# This is why it's called Exponential Time Complexity.
+
+# O(n log n) - Linearithmic Time:
+Example: Mergesort
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+
+        merge_sort(left_half)  # O(n log n)
+        merge_sort(right_half)
+
+        i = j = k = 0
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+
+        while i < len(left_half):
+            arr[k] = left_half[i]
+            i += 1
+            k += 1
+
+        while j < len(right_half):
+            arr[k] = right_half[j]
+            j += 1
+            k += 1
+# O(n log n) - Linearithmic Time Complexity
+# Because the number of operations is directly proportional to the size of the input,
+# which is the number of elements in the array.
+# This is why it's called Linearithmic Time Complexity.
+
+merge_sort([1, 3, 2, 4, 5, 7, 6, 8, 9, 10])
+# how ? 
+# 1. divide the array into two halves
+# 2. sort the left half
+# 3. sort the right half
+# 4. merge the two halves together
+# 5. return the sorted array
+# O(n log n) - Linearithmic Time Complexity
