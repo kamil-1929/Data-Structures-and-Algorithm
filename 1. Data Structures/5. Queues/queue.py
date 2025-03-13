@@ -1,11 +1,10 @@
 
-# Array Queue is bad because of the memory space complexity  due to reindexing
-
 # Big O of LinkedList Queue:
 # Lookup O(n)
 # Enqueue O(1)
 # Dequeue O(1)
 # Peek O(1)
+# Array Queue is bad because of the bad memory space complexity while re-indexing at dequeue()
 
 # Simple Queue Implementation:
 class Queue:
