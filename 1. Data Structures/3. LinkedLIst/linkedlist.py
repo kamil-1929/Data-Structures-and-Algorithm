@@ -3,6 +3,13 @@
 # reference (or link) to the next node in the sequence.
 # This allows for efficient insertion and deletion of elements.
 
+# Big O 
+# Prepend O(1)
+# Append O(1)
+# Lookup (n)
+# Insert (n)
+# Delete (n)
+
 # Node Class
 
 class Node:

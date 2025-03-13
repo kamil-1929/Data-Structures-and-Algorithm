@@ -7,6 +7,13 @@
 # Hash tables are useful when you need to store and retrieve data based on a unique identifier, such
  # as a string or an integer.
  
+ # Big O :
+ # Space O(n)
+ # Insert O(1)
+ # lookup O(1)
+ # delete O(1)
+ # Note: could be O(n) with hash collisions and dynamic array resizing but unlikely
+ 
 class HashTable:
     def __init__(self, size=10):
         self.size = size

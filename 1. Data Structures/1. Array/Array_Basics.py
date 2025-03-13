@@ -163,6 +163,20 @@ def is_prime(n):
 primes = [x for x in range(50) if is_prime(x)]
 print(primes)
 
+# Big O 
+'''
+Static Array:
+Lookup O(1)
+Push O(1)
+Insert O(n)
+Delete O(n)
+
+Dynamic Array:
+Lookup O(1)
+append O(1)
+Insert O(n)
+Delete O(n)
+'''
 
 
 
