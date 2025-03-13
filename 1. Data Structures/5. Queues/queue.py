@@ -1,4 +1,4 @@
-# Simple Queue Implementation:
+
 # Array Queue is bad because of the memory space complexity  due to reindexing
 
 # Big O of LinkedList Queue:
@@ -7,7 +7,7 @@
 # Dequeue O(1)
 # Peek O(1)
 
-
+# Simple Queue Implementation:
 class Queue:
     def __init__(self):
         self.items = []
@@ -42,7 +42,6 @@ if __name__ == "__main__":
     print("Size of the Queue:", queue.size())
 
 # Queue Using Linked List
-
 class Node:
     def __init__(self, value):
         self.value = value

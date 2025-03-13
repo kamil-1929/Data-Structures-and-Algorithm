@@ -1,4 +1,4 @@
-# Stack using a list in Python 
+
 # Big (O) - Both Stack and Link is fine for the Stack due to same complexity
 # Linked List
 # Lookup O(n)
@@ -6,6 +6,7 @@
 # pop = O(1)
 # peek = O(1)
 
+# Simple Stack using a list in Python 
 class Stack:
     def __init__(self):
         self.items = []
@@ -41,7 +42,6 @@ class Stack:
 #     print("Size of the stack", stack.size())
     
 # Stack Using LinkedList 
-
 class Node:
     def __init__(self, value):
         self.value = value 
