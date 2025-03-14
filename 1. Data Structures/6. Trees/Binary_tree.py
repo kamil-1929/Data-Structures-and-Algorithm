@@ -2,6 +2,25 @@
 # A binary tree is a tree data structure in which each node has at most 
 # two children, referred to as the left child and the right child.
 
+    #     10
+    #    /  \
+    #   20   30
+    #  / \   / \
+    # 40  50 60  70
+#     Key Differences
+# Ordering:
+# Binary Tree: No specific ordering of nodes.
+# Binary Search Tree: Follows the left < parent < right rule.
+
+# Searching:
+# Binary Tree: Searching for a value may require traversing the entire tree.
+# Binary Search Tree: Searching is efficient due to the ordering, allowing for O(log n) time complexity on average.
+
+# Insertion and Deletion:
+# Binary Tree: Insertion can be done in any order without regard for value.
+# Binary Search Tree: Insertion and deletion must maintain the BST properties.
+
+
 class Node:
     def __init__(self,value):
         self.value = value
@@ -21,16 +40,12 @@ class BinaryTree:
     
     def _insert_recursively(self, node, value):
         """Helper method to insert a new node recursively."""
-        if value < node.value: # If the value is less than the current node's value
-            if node.left is None:
-                node.left = Node(value)
-            else:
-                self._insert_recursively(node.left, value)
+        if node.left is None:
+            node.left = Node(value)
+        elif node.right is None:
+            node.right = Node(value)
         else:
-            if node.right is None:
-                node.right = Node(value)
-            else:
-                self._insert_recursively(node.right, value)
+            self._insert_recursively(node.left, value)
     
     def inorder_traversal(self):
         return self._inorder_recursively(self.root)
