@@ -52,7 +52,8 @@ def insertion_sort(arr):
 if __name__ == "__main__":
     arr = [72, 27, 23, 10, 29, 92, 91]
     print("Insertion Sort Result:", insertion_sort(arr))            
-    
+
+# Insertion sort   
 # Big O(n^2)
 # for almost sorted array then it is O(n)
 
